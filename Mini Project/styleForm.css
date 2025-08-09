@@ -1,0 +1,260 @@
+/* Reset and Base Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: bgMove 10s ease-in-out infinite alternate;
+  }
+  
+  /* Container */
+  .container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin: 20px;
+  }
+  
+  /* Headings */
+  .container h1 {
+    color: #004080;
+    margin-bottom: 10px;
+  }
+  
+  .container h2 {
+    font-size: 16px;
+    color: #5b5a5a;
+    margin-bottom: 30px;
+  }
+  
+  /* Form Section */
+  .reg {
+    text-align: left;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border: 1px solid #c7c5c5;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border 0.2s ease-in-out;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #004080;
+    outline: none;
+  }
+  
+  /* Checkbox labels */
+  input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.1);
+  }
+  
+  label[for="other"],
+  label[for="image"] {
+    margin-top: 20px;
+  }
+  
+  /* Button */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #005fbe;
+  }
+  
+  /* Message paragraph */
+  p {
+    font-size: 14px;
+    color: #cc0000;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Link */
+  a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.complaint-card {
+    background: linear-gradient(135deg, #ffe5ec 60%, #e0c3fc 100%);
+    border: 2.5px solid #4e8cff;
+    box-shadow: 0 0 0 4px #4e8cff33, 0 8px 32px rgba(32, 64, 128, 0.18);
+    padding: 40px 32px;
+    max-width: 600px;
+    margin: 40px auto;
+    animation: cardGlow 2s infinite alternate, fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.complaint-card h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #d72660 0%, #204080 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+.complaint-card h2 {
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+
+.complaint-card label {
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: block;
+    color: #204080;
+}
+
+.complaint-card select,
+.complaint-card input[type='text'],
+.complaint-card input[type='file'] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1.5px solid #c9d6ff;
+    margin-bottom: 24px;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+.complaint-card select:focus,
+.complaint-card input[type='text']:focus,
+.complaint-card input[type='file']:focus {
+    border-color: #204080;
+    outline: none;
+}
+
+.complaint-card .checkbox-list {
+    margin-bottom: 24px;
+}
+.complaint-card .checkbox-list label {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.08rem;
+    margin-bottom: 14px;
+    cursor: pointer;
+    color: #222;
+    transition: color 0.2s;
+}
+.complaint-card .checkbox-list label:hover {
+    color: #204080;
+}
+.complaint-card input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    accent-color: #204080;
+}
+
+.complaint-card button[type='submit'] {
+    background: linear-gradient(90deg, #ff7eb3 0%, #65c7f7 100%);
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 2px 8px #20408033;
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 18px;
+    cursor: pointer;
+}
+.complaint-card button[type='submit']:hover {
+    background: linear-gradient(90deg, #65c7f7 0%, #ff7eb3 100%);
+    transform: scale(1.05);
+}
+
+.complaint-card .section-label {
+    background: linear-gradient(90deg, #ff7eb3 0%, #65c7f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    animation: fadeInUp 1s;
+}
+
+.complaint-card .highlight {
+    background: #ffe5ec;
+    color: #d72660;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1.08rem;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@keyframes cardGlow {
+    from { box-shadow: 0 0 0 4px #4e8cff33, 0 8px 32px rgba(32, 64, 128, 0.18);}
+    to   { box-shadow: 0 0 0 8px #ff7eb333, 0 8px 32px rgba(32, 64, 128, 0.22);}
+}
